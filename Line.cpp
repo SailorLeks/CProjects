@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -13,7 +13,8 @@ int main()
     cout << "[t] Треугольник пустой" << endl;
     cout << "[z] Треугольник заполненный" << endl;
     cout << "[s] Квадрат заполненный" << endl;
-    cout << "[e] Квадрат пустой" << endl << endl;
+    cout << "[e] Квадрат пустой" << endl;
+    cout << "[p] Прямоугольник" << endl << endl;
 
     cout << "Выбери тип фигуры: ";
     char type;
@@ -111,7 +112,7 @@ int main()
         }
         system("pause");
     }
-    
+
     else if (type == 't')
     {
         cout << "Укажи размер: ";
@@ -174,13 +175,40 @@ int main()
 
         }
     }
+    else if (type == 'p')
+    {
+        cout << "Укажи длину: ";
+        short dlina;
+        cin >> dlina;
+
+        cout << "Укажи ширину: ";
+        short shirina;
+        cin >> shirina;
+
+        int a = 0;
+        int b = 0;
+
+        while (b < shirina)
+        {
+            while (a < dlina)
+            {
+                cout << texture;
+                a++;
+            }
+            a = 0;
+            cout << endl;
+            b++;
+        }
+    }
     else
     {
         cout << "Еще не придумано:(" << endl;
     }
     system("pause");
     return 0;
-}
+}   
+
+
 
 
 
